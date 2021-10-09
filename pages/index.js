@@ -24,7 +24,7 @@ export async function getStaticProps() {
   // const res = await fetch("http://localhost:1337/posts")
   // const posts = await res.json()
 
-  console.log("node next server")
+  console.log("node next server", BACKEND)
   return {
     props: {},
     // props: {posts},
