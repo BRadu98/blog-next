@@ -2,9 +2,12 @@ import Link from 'next/link'
 
 export default function Home({ posts }) {
   // console.log(posts)
+  const BACKEND = process.env.BACKEND
+  console.log(BACKEND)
   return (
     <div>
     <h1>test</h1>
+    {BACKEND && <h2>{BACKEND}</h2>}
     {posts && posts.map((post) => (
       <Link href={`/${post.Slug}`} key={post.id}>
         <a>
@@ -23,6 +26,7 @@ export async function getStaticProps() {
 
   console.log("node next server")
   return {
-    props: {posts},
+    props: {},
+    // props: {posts},
   }
 }

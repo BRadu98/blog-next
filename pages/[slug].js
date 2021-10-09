@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 
   return {
     // paths,
-    paths: {slug: "test"},
+    paths: { params: {slug: "test"}},
     fallback: true, //! static vs incremental/ssr
   }
 }
